@@ -22,7 +22,12 @@ Function university_files(){
 }
 
 add_action('wp_enqueue_scripts','university_files');
+function university_features(){
+   register_nav_menu('headerMenuLocation','Header Menu Location');
+   add_theme_support('title_tag');
+}
 
+add_action('after_setup_theme','university_features');
 
 
  

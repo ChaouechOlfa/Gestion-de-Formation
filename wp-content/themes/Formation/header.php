@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html <?php language_attributes()?>>
     <head>
+      <meta name="viewport" content="witdh=device_width, initial-scale=1">
    <?php wp_head(); ?>
     </head>
     <body>
@@ -13,10 +14,13 @@
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="courses.html">Courses</a></li>
+        <?php
+        wp_nav_menu(array('theme_location'=>'headerMenuLocation'));
+        ?>
+       <!-- <ul>
+          <li <?php if( is_page(' about-us ')) echo 'class="current-menu-item"'?>><a class="active" href="index.html">Home</a></li>
+          <li><a href="<?php echo site_url ('/about')?>">About</a></li>
+          <li><a href="<?php echo site_url ('/Courses')?>">Courses</a></li>
           <li><a href="trainers.html">Trainers</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="pricing.html">Pricing</a></li>
@@ -39,7 +43,7 @@
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
-        </ul>
+        </ul>-->
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 

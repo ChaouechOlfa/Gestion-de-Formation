@@ -9,7 +9,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">Mentor</a></h1>
+      <h1 class="logo me-auto"><a href="<?php echo site_url('/Home')?>">CNUDST</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -20,7 +20,7 @@
        <!-- <ul>
           <li <?php if( is_page(' about-us ')) echo 'class="current-menu-item"'?>><a class="active" href="index.html">Home</a></li>
           <li><a href="<?php echo site_url ('/about')?>">About</a></li>
-          <li><a href="<?php echo site_url ('/Courses')?>">Courses</a></li>
+          <li><a href="<?php echo site_url ('/courses')?>">Courses</a></li>
           <li><a href="trainers.html">Trainers</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="pricing.html">Pricing</a></li>

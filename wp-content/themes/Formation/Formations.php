@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-<main id="main" data-aos="fade-in">
+ <main id="main" data-aos="fade-in">
 
 <!-- ======= Breadcrumbs ======= -->
 <div class="breadcrumbs">

@@ -1,13 +1,14 @@
 <?php
 function university_post_types()
 {
-   register_post_type('event',array(
+   register_post_type('formation',array(
                        'public'=>true,
                      'labels'=>array(
                         'name'=>'Formations',
                         'add_new_item'=>'Ajouter Formation',
                         'edit_item'=>'Modifier Formation',
-                        'all_items'=>'lister Formations'
+                        'all_items'=>'Lister Formations',
+                        'singular_name'=>'Formation'
                      ),
                      'menu_icon'=>'dashicons-calendar'
                   ));

@@ -14,8 +14,8 @@ register_deactivation_hook( __FILE__, 'deactivate_theme_crud_plugin_function' );
 add_action('admin_menu', 'my_menu_pages');
 function my_menu_pages(){
     add_menu_page('THEME', 'THEME', 'manage_options', 'new-entry','my_menu_output' );
-    add_submenu_page('new-entry', 'Theme de formation', 'New THEME', 'manage_options', 'new-entry', 'my_menu_output' );
-    add_submenu_page('new-entry', 'Theme de formation', 'View THEMES', 'manage_options', 'view-entries', 'my_submenu_output' );
+    add_submenu_page('new-entry', 'Theme de formation', 'NOUVEAU THEME', 'manage_options', 'new-entry', 'my_menu_output' );
+    add_submenu_page('new-entry', 'Theme de formation', 'LISTER THEME', 'manage_options', 'view-entries', 'my_submenu_output' );
     
 }
 
@@ -38,11 +38,11 @@ function my_submenu_output() {
   ob_start();
 ?>
   <div class="wrap wqmain_body">
-    <h3>View Themes</h3>
+    <h3>Lister Themes</h3>
     <?php echo $message; ?>
     <form id="entry-table" method="GET">
       <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>"/>
-      <?php $table->search_box( 'search', 'search_id' ); $table->display() ?>
+      <?php $table->search_box( 'Rechercher', 'search_id' ); $table->display() ?>
     </form>
   </div>
 <?php
@@ -96,7 +96,7 @@ class EntryListTable extends WP_List_Table {
 
     function column_default($item, $column_name) {
         switch($column_name){
-          case 'action': echo '<a href="'.admin_url('admin.php?page=new-entry&entryid='.$item['id']).'">Edit</a>';
+          case 'action': echo '<a href="'.admin_url('admin.php?page=new-entry&entryid='.$item['id']).'">Modifier</a>';
         }
         return $item[$column_name];
     }
@@ -113,7 +113,7 @@ class EntryListTable extends WP_List_Table {
     function get_columns() {
       $columns = array(
         'cb' => '<input type="checkbox" />',
-			  'ThemeFormation'=> 'Title',
+			  'ThemeFormation'=> 'Titre',
         'description'=> 'Description',
         'action' => 'Action'
       );
@@ -128,7 +128,7 @@ class EntryListTable extends WP_List_Table {
     }
 
     function get_bulk_actions() {
-      $actions = array( 'delete' => 'Delete' );
+      $actions = array( 'delete' => 'Supprimer' );
       return $actions;
     }
 

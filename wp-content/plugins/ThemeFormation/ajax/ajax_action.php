@@ -13,9 +13,9 @@ function wqnew_entry_callback_function() {
       "updated_at" => time()
     ));
 
-    $response = array('message'=>'Data Has Inserted Successfully', 'rescode'=>200);
+    $response = array('message'=>'Les données ont été insérées avec succès', 'rescode'=>200);
   } else {
-    $response = array('message'=>'Data Has Already Exist', 'rescode'=>404);
+    $response = array('message'=>'Les données existent déjà', 'rescode'=>404);
   }
   echo json_encode($response);
   exit();
@@ -37,9 +37,9 @@ function wqedit_entry_callback_function() {
       "updated_at" => time()
     ), array('id' => $_POST['wqentryid']) );
 
-    $response = array('message'=>'Data Has Updated Successfully', 'rescode'=>200);
+    $response = array('message'=>'Les données ont été mises à jour avec succès', 'rescode'=>200);
   } else {
-    $response = array('message'=>'Data Has Already Exist', 'rescode'=>404);
+    $response = array('message'=>'Les données existent déjà', 'rescode'=>404);
   }
   echo json_encode($response);
   exit();

@@ -9,10 +9,10 @@ jQuery(document).ready(function(){
     var wqdescription = $('#wqdescription').val();
 
     if(wqtitle=='') {
-      $('#wqtitle_message').html('Title is Required');
+      $('#wqtitle_message').html('Ce champ est obligatoire');
     }
     if(wqdescription=='') {
-      $('#wqdescription_message').html('Description is Required');
+      $('#wqdescription_message').html('Ce champ est obligatoire');
     }
 
     if(wqtitle!='' && wqdescription!='') {
@@ -52,10 +52,10 @@ jQuery(document).ready(function(){
     var wqdescription = $('#wqdescription').val();
 
     if(wqtitle=='') {
-      $('#wqtitle_message').html('Title is Required');
+      $('#wqtitle_message').html('Ce champ est obligatoire');
     }
     if(wqdescription=='') {
-      $('#wqdescription_message').html('Description is Required');
+      $('#wqdescription_message').html('Ce champ est obligatoire');
     }
 
     if(wqtitle!='' && wqdescription!='') {

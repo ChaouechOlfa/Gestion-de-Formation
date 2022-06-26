@@ -18,7 +18,7 @@
 
     <?php
               $homepageEvents = new WP_Query(array(
-                'posts_per_page'=> 2,
+                'posts_per_page'=> 3,
                 'post_type' =>'formation'
             ));
             while($homepageEvents->have_posts()){

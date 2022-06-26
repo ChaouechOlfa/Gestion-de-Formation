@@ -47,12 +47,12 @@ while(have_posts()){
               <h5>Schedule</h5>
               <p>5.00 pm - 7.00 pm</p>
             </div>
-            <section id="hero" class="d-flex justify-content-center align-items-center">
-    <div  data-aos="zoom-in" data-aos-delay="100">
+            
+    <div  class="text-center">
+    <a href="courses.html" class="get-started-btn">S'inscrire</a>
       
-      <a href="courses.html" class="btn-get-started">S'inscrire</a>
     </div>
-  </section><!-- End Hero -->
+  
 
           </div>
         </div>

@@ -2,6 +2,7 @@
 /*function university_post_types()
 {
    register_post_type('formation',array(
+                       'supports'=>array('title','editor','excerpt','custom-fields'),
                        'public'=>true,
                      'labels'=>array(
                         'name'=>'Formations',
@@ -42,7 +43,7 @@ $args = array(
 'description'       => 'description formation',
 'public'            => true,
 'menu_position'     => 5,
-'supports'          => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments', 'custom-fields' ),
+'supports'          => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments'),
 'has_archive'       => true,
 'show_in_admin_bar' => true,
 'show_in_nav_menus' => true,
